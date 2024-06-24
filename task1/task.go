@@ -21,13 +21,16 @@ func main() {
 	fmt.Fscan(os.Stdin, &b)
 	fmt.Println("Введите операцию: ")
 	fmt.Fscan(os.Stdin, &sign)
-	if sign == "+" {
+	switch sign {
+	case "+":
 		fmt.Println(a + b)
-	} else if sign == "-" {
+	case "-":
 		fmt.Println(a - b)
-	} else if sign == "*" {
+	case "*":
 		fmt.Println(a * b)
-	} else if sign == "/" {
+	case "/":
 		fmt.Println(a / b)
+	default:
+		log.Fatal(errors.New("переданной операции не существует"))
 	}
 }
