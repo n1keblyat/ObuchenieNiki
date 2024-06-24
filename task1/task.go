@@ -30,16 +30,16 @@ func main() {
 	if err != nil {
 		log.Fatal(errors.New("введен не знак"))
 	}
-	//switch sign {
-	//case "+":
-	//	fmt.Println(a + b)
-	//case "-":
-	//	fmt.Println(a - b)
-	//case "*":
-	//	fmt.Println(a * b)
-	//case "/":
-	//	fmt.Println(a / b)
-	//default:
-	//	log.Fatal(errors.New("переданной операции не существует"))
-	//}
+	switch sign {
+	case "+":
+		fmt.Println(a + b)
+	case "-":
+		fmt.Println(a - b)
+	case "*":
+		fmt.Println(a * b)
+	case "/":
+		fmt.Println(a / b)
+	default:
+		log.Fatal(errors.New("переданной операции не существует"))
+	}
 }
