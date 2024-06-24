@@ -18,9 +18,15 @@ func main() {
 	if err != nil {
 		log.Fatal(errors.New("введено не число"))
 	}
-	fmt.Fscan(os.Stdin, &b)
+	_, err = fmt.Fscan(os.Stdin, &b)
+	if err != nil {
+		log.Fatal(errors.New("введено не число"))
+	}
 	fmt.Println("Введите операцию: ")
-	fmt.Fscan(os.Stdin, &sign)
+	_, err = fmt.Fscan(os.Stdin, &sign)
+	if err != nil {
+		log.Fatal(errors.New("введен не знак"))
+	}
 	if sign == "+" {
 		fmt.Println(a + b)
 	} else if sign == "-" {
