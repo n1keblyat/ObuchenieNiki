@@ -8,4 +8,5 @@ func main() {
 		numbers = append(numbers, i)
 	}
 	fmt.Println(numbers)
+
 }
