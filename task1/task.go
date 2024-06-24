@@ -1,7 +1,9 @@
 package main
 
 import (
+	"errors"
 	"fmt"
+	"log"
 	"os"
 )
 
@@ -12,7 +14,10 @@ func main() {
 	var sign string
 
 	fmt.Println("Введите числа: ")
-	fmt.Fscan(os.Stdin, &a)
+	_, err := fmt.Fscan(os.Stdin, &a)
+	if err != nil {
+		log.Fatal(errors.New("введено не число"))
+	}
 	fmt.Fscan(os.Stdin, &b)
 	fmt.Println("Введите операцию: ")
 	fmt.Fscan(os.Stdin, &sign)
