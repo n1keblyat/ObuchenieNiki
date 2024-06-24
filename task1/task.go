@@ -24,8 +24,6 @@ func main() {
 	}
 	fmt.Println("Введите операцию: ")
 
-	fmt.Fscan(os.Stdin, &sign)
-
 	_, err = fmt.Fscan(os.Stdin, &sign)
 	if err != nil {
 		log.Fatal(errors.New("введен не знак"))
