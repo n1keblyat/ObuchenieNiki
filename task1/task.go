@@ -28,9 +28,10 @@ func main() {
 	if err != nil {
 		log.Fatal(errors.New("введен не знак"))
 	}
-
+	calculator(a, b, sign)
 }
-func calculator() {
+
+func calculator(a, b int, sign string) {
 	switch sign {
 	case "+":
 		fmt.Println(a + b)
